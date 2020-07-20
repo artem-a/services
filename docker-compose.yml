@@ -20,5 +20,15 @@ services:
     ports:
       - 127.0.0.1:5432:5432
 
+  mqtt:
+    image: eclipse-mosquitto:1.6.10
+    restart: always
+    volumes:
+      - mqttdata:/mosquitto/data
+    ports:
+      - 127.0.0.1:1883:1883
+      - 127.0.0.1:9001:9001
+
 volumes:
   postgresdata:
+  mqttdata:
