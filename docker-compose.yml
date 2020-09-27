@@ -25,6 +25,7 @@ services:
     restart: always
     volumes:
       - mqttdata:/mosquitto/data
+      - ./config/mosquitto.conf:/mosquitto/config/mosquitto.conf
     ports:
       - 127.0.0.1:1883:1883
       - 127.0.0.1:9001:9001
