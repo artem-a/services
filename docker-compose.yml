@@ -38,7 +38,18 @@ services:
     ports:
       - 127.0.0.1:27017:27017
 
+  mysql:
+    image: mysql:8.0.22
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - mysqldata:/var/lib/mysql
+    ports:
+      - 127.0.0.1:3306:3306
+
 volumes:
   postgresdata:
   mqttdata:
   mongodata:
+  mysqldata:
