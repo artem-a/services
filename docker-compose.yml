@@ -157,7 +157,7 @@ services:
   #       soft: 65536
   #       hard: 65536
   #   volumes:
-  #     - ./config/config.json:/centrifugo/config.json
+  #     - ./config/centrifugo.json:/centrifugo/config.json
   #   command: centrifugo -c config.json
 
 volumes:
